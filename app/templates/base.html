@@ -2,17 +2,67 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Klasifikasi Lidah Buaya{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <nav>
-        <a href="{{ url_for('index') }}">Upload Gambar</a>
-        <a href="{{ url_for('train_data') }}">Data Training</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid d-flex justify-content-between">
+            <a class="navbar-brand" href="#">Klasifikasi Lidah Buaya</a>
+            <div class="profile">
+                <a href="#" class="profile-text text-black">Nadiya Auliya</a>
+                <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Profile Picture" class="profile-pic ml-3">
+            </div>
+        </div>
     </nav>
     
-    <div class="container">
+    <div class="container ">
         {% block content %}{% endblock %}
+        <div class="mt-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="pt-2">Informasi Model</h1>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <tr>
+                            <th>Model</th>
+                            <td>CNN (Convolutional Neural Network)</td>
+                        </tr>
+                        <tr>
+                            <th>Data Training</th>
+                            <td>776</td>
+                        </tr>
+                        <tr>
+                            <th>Data Validasi</th>
+                            <td>169</td>
+                        </tr>
+                        <tr>
+                            <th>Epoch</th>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <th>Training Plot</th>
+                            <td><img src="{{ url_for('static', filename='reports/training_plot.png') }}" alt="Training Plot" class="img-fluid"></td>
+                        </tr>
+                        <tr>
+                            <th>Confusion Matrix</th>
+                            <td><img src="{{ url_for('static', filename='reports/confusion_matrix.png') }}" alt="Confusion Matrix" class="img-fluid"></td>
+                        </tr>
+                        <tr>
+                            <th>Classification Report</th>
+                            <td><img src="{{ url_for('static', filename='reports/classification_report.png') }}" alt="Classification Report" class="img-fluid"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

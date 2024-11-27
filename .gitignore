@@ -14,6 +14,9 @@ env/
 # Keras/TensorFlow model files (keras .h5 model files)
 models/*.h5
 
+#static
+static/uploads/
+
 # IDE specific files
 .idea/
 .vscode/

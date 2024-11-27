@@ -1,3 +1,2 @@
-#!/bin/sh
 source .venv/bin/activate
-python run.py
+flask run --host=0.0.0.0 --port=$PORT

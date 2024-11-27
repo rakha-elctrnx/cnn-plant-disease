@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="upload-container">
-    <h1>Upload Gambar Lidah Buaya</h1>
-    
-    <form method="POST" enctype="multipart/form-data">
-        <input type="file" name="file" accept=".jpg,.jpeg,.png" required>
-        <button type="submit">Klasifikasikan</button>
-    </form>
+<div class="card">
+    <div class="card-header">
+        <h4 class="pt-2">Klasifikasi Tanaman Lidah Buaya Sehat & Tidak Sehat</h1>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="/upload" enctype="multipart/form-data" class="form-group">
+            <label for="file" class="form-label text-start w-100">Pilih Gambar</label>
+            <input type="file" name="file" id="file" accept=".jpg,.jpeg,.png" class="form-control" required>
+            <button type="submit" class="btn btn-primary mt-3">Klasifikasi Gambar</button>
+        </form>
+    </div>
 </div>
 {% endblock %}

@@ -14,7 +14,9 @@
   ];
 
   # Sets environment variables in the workspace
-  env = {};
+  env = {
+    PORT=5000;
+  };
   idx = {
     extensions = [ "ms-python.python" ];
 
@@ -30,13 +32,13 @@
       };
     };
 
+
     # Workspace lifecycle hooks
     workspace = {
       # Runs when a workspace is first created
       onCreate = {
         install =
           "python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt";
-        # Open editors for the following files by default, if they exist:
         default.openFiles = ["run.py" ];
       };
       # Runs when the workspace is (re)started

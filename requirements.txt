@@ -5,3 +5,4 @@ Pillow
 matplotlib
 scikit-learn
 Werkzeug
+pandas

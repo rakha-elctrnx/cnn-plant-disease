@@ -1,19 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="result-container">
-    <h1>Hasil Klasifikasi</h1>
-    
-    <div class="result-details">
-        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Gambar yang diunggah">
-        
-        <div class="prediction-info">
-            <h2>Hasil Prediksi</h2>
-            <p>Status: <strong>{{ prediction }}</strong></p>
-            <p>Tingkat Kepercayaan: <strong>{{ "%.2f"|format(confidence) }}%</strong></p>
-        </div>
+<div class="card">
+    <div class="card-header">
+        <h4 class="pt-2">Hasil Klasifikasi</h1>
     </div>
-    
-    <a href="{{ url_for('index') }}" class="btn">Kembali</a>
+    <div class="card-body d-flex flex-column align-items-center">
+        <div class="text-center w-25">
+            <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Gambar yang diunggah" class="img-fluid rounded-3">
+        </div>
+        <div class="mt-4">
+            <h5 class="fw-bold">Hasil Prediksi</h5>
+            <table class="border">
+                <tr>
+                    <th class="border py-2 px-4 text-start">Klasifikasi</th>
+                    <td class="border py-2 px-4">{{ prediction }}</td>
+                </tr>
+                <tr>
+                    <th class="border py-2 px-4 text-start">Tingkat Kepercayaan</th>
+                    <td class="border py-2 px-4">{{ "%.2f"|format(confidence) }}%</td>
+                </tr>
+            </table>
+        </div>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary mt-3">Kembali</a>
+    </div>
 </div>
 {% endblock %}

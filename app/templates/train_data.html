@@ -1,23 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="train-container">
-    <h1>Data Training Klasifikasi Lidah Buaya</h1>
-    
-    {% if training_complete %}
-    <div class="alert success">
-        Pelatihan model berhasil diselesaikan!
+<div class="card">
+    <div class="card-header">
+        <h4 class="pt-2">Training Model</h1>
     </div>
-    {% endif %}
-    
-    <form method="POST">
-        <button type="submit">Mulai Pelatihan</button>
-    </form>
-    
-    <div class="data-info">
-        <h2>Informasi Dataset</h2>
-        <p>Total Gambar Sehat: [Jumlah]</p>
-        <p>Total Gambar Sakit: [Jumlah]</p>
+    <div class="card-body">
+        {% if training_complete %}
+        <div class="alert alert-success" role="alert">
+            Pelatihan model berhasil diselesaikan!
+        </div>
+        {% endif %}
+        
+        <form method="POST">
+            <button type="submit" class="btn btn-primary">Mulai Pelatihan</button>
+        </form>
     </div>
 </div>
 {% endblock %}

@@ -15,7 +15,7 @@ def predict_aloe_image(image_path):
     
     # Melakukan prediksi
     predictions = model.predict(img_array)
-    class_labels = ['Sehat', 'Sakit']
+    class_labels = ['Sakit', 'Sehat']
     predicted_class = class_labels[np.argmax(predictions)]
     confidence = np.max(predictions) * 100
     
