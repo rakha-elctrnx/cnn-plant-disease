@@ -1,7 +1,7 @@
-Flask==2.1.0
-tensorflow==2.9.0
-numpy==1.22.4
-Pillow==9.1.1
-matplotlib==3.5.2
-scikit-learn==1.1.1
-Werkzeug==2.0.3
+Flask
+tensorflow
+numpy
+Pillow
+matplotlib
+scikit-learn
+Werkzeug
