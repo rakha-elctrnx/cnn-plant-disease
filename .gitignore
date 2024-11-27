@@ -1,0 +1,35 @@
+# Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environment
+venv/
+env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Keras/TensorFlow model files (keras .h5 model files)
+models/*.h5
+
+# Data directories (if not required in version control)
+data/train/
+data/validation/
+
+# Uploaded files (if stored in static/uploads)
+static/uploads/
+
+# IDE specific files
+.idea/
+.vscode/
+
+# Environment variables (if you use dotenv or similar tools)
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="upload-container">
+    <h1>Upload Gambar Lidah Buaya</h1>
+    
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".jpg,.jpeg,.png" required>
+        <button type="submit">Klasifikasikan</button>
+    </form>
+</div>
+{% endblock %}

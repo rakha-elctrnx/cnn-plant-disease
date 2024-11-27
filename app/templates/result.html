@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="result-container">
+    <h1>Hasil Klasifikasi</h1>
+    
+    <div class="result-details">
+        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Gambar yang diunggah">
+        
+        <div class="prediction-info">
+            <h2>Hasil Prediksi</h2>
+            <p>Status: <strong>{{ prediction }}</strong></p>
+            <p>Tingkat Kepercayaan: <strong>{{ "%.2f"|format(confidence) }}%</strong></p>
+        </div>
+    </div>
+    
+    <a href="{{ url_for('index') }}" class="btn">Kembali</a>
+</div>
+{% endblock %}
