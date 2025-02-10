@@ -14,8 +14,11 @@ env/
 # Keras/TensorFlow model files (keras .h5 model files)
 models/*.h5
 
-#static
-static/uploads/
+# Ignore semua file di dalam static/uploads/
+static/uploads/*
+
+# Kecualikan test.png
+!static/uploads/test.png
 
 # IDE specific files
 .idea/
