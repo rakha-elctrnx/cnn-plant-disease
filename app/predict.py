@@ -5,7 +5,7 @@ from tensorflow.keras.preprocessing import image
 
 def predict_aloe_image(image_path):
     # Memuat model yang sudah dilatih
-    model_path = os.path.join(os.path.dirname(__file__), '../models/aloe_vera_classifier.keras')
+    model_path = os.path.join(os.path.dirname(__file__), '../models/aloe_vera_classifier.h5')
     model = load_model(model_path)
     
     # Memproses gambar

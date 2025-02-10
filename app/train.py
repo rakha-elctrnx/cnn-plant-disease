@@ -41,7 +41,7 @@ def train_model():
     )
     
     # Menyimpan model dalam format .keras
-    model_path = os.path.join(os.path.dirname(__file__), '../models/aloe_vera_classifier.keras')
+    model_path = os.path.join(os.path.dirname(__file__), '../models/aloe_vera_classifier.h5')
     model.save(model_path)
 
     # Evaluasi model dan buat laporan
