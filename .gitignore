@@ -12,13 +12,13 @@ env/
 .ipynb_checkpoints/
 
 # Keras/TensorFlow model files (keras .h5 model files)
-models/*.h5
+models/*.keras
 
 # Ignore semua file di dalam static/uploads/
 static/uploads/*
 
-# Kecualikan test.png
-!static/uploads/test.png
+# Kecualikan test.jpg
+!static/uploads/test.jpg
 
 # IDE specific files
 .idea/
